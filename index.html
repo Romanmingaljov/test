@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Landing page</title>
+	<link href="./css/style.css" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<link href="./css/layout.min.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript">
+		jQuery(function($){
+			$(document).ready(function(){
+				$(".menu").on("click","a", function (event) {
+					event.preventDefault();
+					var id  = $(this).attr('href'),
+						top = $(id).offset().top;
+						top = top-70;
+					$('body,html').animate({scrollTop: top}, 800);
+				});
+			});
+		});
+	</script>
+</head>
+<body id="body">
+	<div class="cont">
+		<div class="header">
+			<div class="fixed_menu">
+				<div class="menu">
+					<ul>
+						<li><a href="#container">Информация о студенте</a></li>
+						<li><a href="#hobby">Хобби</a></li>
+						<li><a href="#back_form">Обратная связь</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="logo">
+		</div>
+		<div class="container" id="container">
+			<div class="first_imp">
+				<label>Страница-визитка студента</label>
+			</div>
+			<div class="container_menu">
+				<div class="left_block">
+					<img src="./images/me.jpg" class="round">
+				</div>
+				<div class="right_block">
+					<ul>
+						<li>Мингалев Роман Вячеславович</li>
+						<li>1995г.р.</li>
+						<li>закончил школу-гимазию №5 в 2012</li>
+						<li>закончил бакалавриат СевГУ в 2017</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="hobby" id="hobby">
+			<div class="hobby_info">
+				<div class="hobby_block">
+					<h3>
+						<p>Спиннинг — ловля хищной рыбы на движущуюся натуральную (снасточка) или искусственную приманку.</p>
+						<p>Троллинг — проводка приманки за движущейся лодкой.</p>
+						<p>Твичинг — ловля с помощью спиннинга, приманка ведётся рывками.</p>
+						<p>Жерлица — насторожённая пассивная самоловная живцовая стационарная снасть.</p>
+					</h3>
+				</div>
+				<div class="hobby_image">
+					<img src="./images/fish.jpg">
+				</div>
+				<div class="hobby_desc">
+					<label><p>&nbsp;Рыбалка</p></label>
+				</div>
+			</div>
+			<div class="hobby_info">
+				<div class="hobby_block">
+					<h3>
+						<p>Кросс-ка́нтри (англ. cross-country) - одна из спортивных дисциплин в маунтинбайке (горном велосипеде), гонки по пересечённой местности со спусками, затяжными подъёмами, скоростными и техническими участками.</p> 
+						<p>Трасса включает в себя как естественные, так и искусственные препятствия, в настоящее время получают распространение элементы из других экстремальных видов маунтинбайка, таких как даунхилл, нортшор и 4х.</p>
+					</h3>
+				</div>
+				<div class="hobby_image">
+					<img src="./images/bicycle.jpg">
+				</div>
+				<div class="hobby_desc">
+					<label><p>&nbsp;Кросс-кантри</p></label>
+				</div>
+			</div>
+			<div class="hobby_info">
+				<div class="hobby_block">
+					<h3>
+						<p>Терренку́р (от фр. terrain — местность и cours — курс лечения) — дозированные физические нагрузки в виде пешеходных прогулок, восхождений в гористой местности по определённым, размеченным маршрутам. </p><p>Терренкур развивает выносливость, улучшает работу сердечно-сосудистой системы и органов дыхания, стимулирует обмен веществ, нервную активность.</p>
+					</h3>
+				</div>
+				<div class="hobby_image">
+					<img src="./images/camp.jpg">
+				</div>
+				<div class="hobby_desc">
+					<label><p>&nbsp;Терренкур</p></label>
+				</div>
+			</div>
+		</div>
+		<div class="back_form" id="back_form">
+			<div class="back_form_main">
+				<form>
+					<label class="label_send">Пожалуйста, заполните поля:</label><br><br>
+				    <input name="name" placeholder="Укажите ваше имя" class="textbox" required />
+				    <input name="emailaddress" placeholder="Укажите ваш Email" class="textbox" type="email" required />
+				    <textarea rows="4" cols="50" name="subject" placeholder="Введите ваше сообщение:" class="message" required></textarea>
+				    <input type="checkbox" name="agree" value="1" class="checked"> <label style="">Я согласен на использование персональных данных</label>
+				    <p>
+				    	<input name="submit" class="button" type="submit" value="Отправить" />
+					</p>
+				</form>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer_block">
+				<a href="https://vk.com/romanmingaljov" class="footer_link"><img src="./images/vk.jpg"></a>
+				<a href="#" class="footer_link"><img src="./images/twit.jpg"></a>
+				<a href="#" class="footer_link"><img src="./images/inst.jpg" height="30px"></a><br>
+				<label class="year">
+					&nbsp;2013-</label><script type="text/javascript">var mdate = new Date(); document.write(mdate.getFullYear());</script>
+					<label class="year">©</label>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
